@@ -1,33 +1,18 @@
-/* eslint-disable unicorn/prefer-string-replace-all */
-
-import path from 'node:path';
-
-import react from '@vitejs/plugin-react-swc';
-import { defineConfig } from 'vite';
-
-import config from './_config';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  server: {
+    host: "::",
+    port: 8080,
+  },
+  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  plugins: [
-    react(),
-    {
-      name: 'dynamic-html',
-      transformIndexHtml(html) {
-        return html
-          .replace(/%TITLE%/g, config.metadata.title)
-          .replace(/%DESCRIPTION%/g, config.metadata.description)
-          .replace(/%KEYWORDS%/g, config.metadata.keywords);
-      }
-    }
-  ],
-  server: {
-    host: config.server.host,
-    port: config.server.port
-  }
-});
+}));

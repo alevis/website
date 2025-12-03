@@ -1,13 +1,5 @@
-import './styles/global.scss';
-import './styles/global.css';
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
 
-import React from 'react';
-
-import { createRoot } from 'react-dom/client';
-
-import App from './app';
-
-const container = document.querySelector('#root');
-const root = createRoot(container as HTMLElement);
-
-root.render(<App />);
+createRoot(document.getElementById("root")!).render(<App />);

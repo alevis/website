@@ -1,0 +1,58 @@
+import { BlogPost } from "@/components/BlogCard";
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: "1",
+    title: "Building a Full-Stack App with React and Node.js",
+    excerpt: "A comprehensive guide to creating modern web applications using React for the frontend and Node.js for the backend. Learn best practices for structuring your project.",
+    date: "Dec 1, 2024",
+    readTime: "8 min read",
+    tags: ["React", "Node.js", "Full-Stack"],
+    slug: "building-fullstack-app-react-nodejs",
+  },
+  {
+    id: "2",
+    title: "Mastering TypeScript: Advanced Patterns",
+    excerpt: "Explore advanced TypeScript patterns including generics, conditional types, and utility types. Take your TypeScript skills to the next level.",
+    date: "Nov 25, 2024",
+    readTime: "12 min read",
+    tags: ["TypeScript", "JavaScript"],
+    slug: "mastering-typescript-advanced-patterns",
+  },
+  {
+    id: "3",
+    title: "CSS Grid vs Flexbox: When to Use Each",
+    excerpt: "Understanding when to use CSS Grid versus Flexbox can be tricky. This guide breaks down the differences and helps you choose the right tool.",
+    date: "Nov 18, 2024",
+    readTime: "6 min read",
+    tags: ["CSS", "Web Design"],
+    slug: "css-grid-vs-flexbox",
+  },
+  {
+    id: "4",
+    title: "Getting Started with Docker for Developers",
+    excerpt: "Docker simplifies development environments and deployment. Learn the basics of containerization and how to dockerize your applications.",
+    date: "Nov 10, 2024",
+    readTime: "10 min read",
+    tags: ["Docker", "DevOps"],
+    slug: "getting-started-docker-developers",
+  },
+  {
+    id: "5",
+    title: "Building REST APIs with Best Practices",
+    excerpt: "Learn how to design and build RESTful APIs that are scalable, maintainable, and follow industry best practices for API development.",
+    date: "Nov 3, 2024",
+    readTime: "9 min read",
+    tags: ["API", "Backend", "REST"],
+    slug: "building-rest-apis-best-practices",
+  },
+  {
+    id: "6",
+    title: "React Hooks Deep Dive: useEffect Explained",
+    excerpt: "The useEffect hook is powerful but often misunderstood. This deep dive covers common pitfalls and advanced usage patterns.",
+    date: "Oct 28, 2024",
+    readTime: "7 min read",
+    tags: ["React", "Hooks"],
+    slug: "react-hooks-useeffect-explained",
+  },
+];
